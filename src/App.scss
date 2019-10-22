@@ -9,8 +9,9 @@
   .OurTeam__title {
     font-weight: 500;
     color: $main-color;
+    font-size: 2rem;
 
-    @include extraLarge {      
+    @include large {      
       font-size: 3.8rem;
     }
   }

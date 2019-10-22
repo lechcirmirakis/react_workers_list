@@ -6,13 +6,13 @@ import './Members.scss';
 class Members extends Component {
 
     showAllMembers = member => {
-        const {name, position, location, avatar, email} = member;
-        return <Member 
-            name={name} 
-            position={position} 
-            location={location} 
-            avatar={avatar} 
-            key={name} 
+        const { name, position, location, email } = member;
+        return <Member
+            name={name}
+            position={position}
+            location={location}
+            avatar={"https://picsum.photos/id/"+ Math.floor(Math.random() * 100) + "/400/400"}
+            key={name}
             email={email} />
     }
 
