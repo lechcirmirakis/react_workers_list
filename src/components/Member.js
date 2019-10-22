@@ -3,7 +3,7 @@ import Mail from './Mail';
 
 const member = (props) => {
     return (
-        <div className="member">
+        <div className="member" onClick={props.click}>
             <div className="member__avatar">
                 <img className="avatar" src={props.avatar} alt=""/>
                 <Mail mail={props.email} />
