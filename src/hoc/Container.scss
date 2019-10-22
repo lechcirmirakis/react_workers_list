@@ -1,0 +1,9 @@
+@import '../styles/global';
+
+.container {
+    margin: 0 auto;
+    
+    @include extraLarge {
+        max-width: 1260px;
+    }
+}

@@ -1,18 +1,29 @@
-@import 'styles/global';
+@import "styles/global";
 
 .OurTeam {
-    min-height: 100vh;
-    position: relative;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 50px;
+  text-align: center;
+
+  .OurTeam__title {
+    font-weight: 500;
+    color: $main-color;
+
+    @include extraLarge {      
+      font-size: 3.8rem;
+    }
+  }
 }
 
 .OurTeam::after {
-    content: "";
-    background-image: url('./static/images/bg.png');
-    opacity: 0.3;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
-  }
+  content: "";
+  background-image: url("./static/images/bg.png");
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}

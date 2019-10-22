@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-import './App.scss';
+import React from 'react';
 import Container from './hoc/container';
+import Members from './containers/Members';
+import './App.scss';
 
-class OurTeam extends Component {
-
-  render() {
-    return (
-      <section className="OurTeam">
-        <Container>
-          <h2 className="OurTeam__title">Meet our team</h2>
-          <div className="OurTeam__members">
+const OurTeam = () => {
+  return (
+    <section className="OurTeam">
+      <Container>
+        <h2 className="OurTeam__title">Meet our team</h2>
+        <Members />
+        {/* <div className="OurTeam__members">
             <div className="member">
-          
+
             </div>
-          </div>
-        </Container>
-      </section>
-    )
-  }
+          </div> */}
+      </Container>
+    </section>
+  )
 }
+
 
 export default OurTeam;
