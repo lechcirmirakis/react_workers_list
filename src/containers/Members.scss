@@ -1,0 +1,11 @@
+@import "../styles/global";
+
+.OurTeam__members {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .member {
+        width: 20%;
+    }
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import membersList from '../static/team';
 import Member from '../components/Member';
+import './Members.scss';
 
 class Members extends Component {
 
