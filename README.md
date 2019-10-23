@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live
+
+https://lechcirmirakis.github.io/react_workers_list/
+
 ## Local launch
 
 Clone or download repo.
