@@ -1,0 +1,8 @@
+.container {
+  margin: 0 auto;
+  height: 100%;
+
+  @include extraLarge {
+    max-width: 1310px;
+  }
+}

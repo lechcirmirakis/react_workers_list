@@ -1,12 +1,9 @@
-@import "styles/global";
-
-.Slider {
-  background-image: url("./static/images/bg_slider.png");
-  width: 100vw;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-}
+@import "styles/colors";
+@import "styles/breakpoints";
+@import "styles/mixins";
+@import "styles/container";
+@import "styles/members";
+@import "styles/slider";
 
 .OurTeam {
   min-height: 100vh;

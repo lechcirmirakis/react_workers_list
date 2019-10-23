@@ -1,0 +1,93 @@
+// Styles for Members View
+
+.OurTeam__members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+
+  .member {
+    cursor: pointer;
+    transition: ease 0.5s;
+    width: 100%;
+    margin-bottom: 50px;
+
+    .mail {
+      background: $main-color;
+      border-radius: 100%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .member__avatar {
+      width: 100%;
+      position: relative;
+      max-width: 180px;
+      margin: 0 auto;
+
+      .avatar {
+        object-fit: cover;
+        width: 100%;
+        border-radius: 100%;
+        max-width: 180px;
+      }
+    }
+
+    .member__content {
+      margin-top: 20px;
+
+      .name {
+        color: $main-color;
+        font-weight: normal;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+      }
+
+      .position {
+        color: $second-color;
+        color: #48c3dc;
+        font-weight: 300;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+      }
+
+      .location {
+        font-weight: normal;
+        color: $main-dark;
+      }
+    }
+
+    @include medium {
+      width: 50%;
+      padding: 7px;
+      margin-bottom: 58px;
+    }
+
+    @include mediumLarge {
+      width: 33.333333%;
+    }
+
+    @include large {
+      width: 25%;
+    }
+
+    @include extraLarge {
+      width: 20%;
+    }
+  }
+
+  .member:hover {
+    opacity: 0.7;
+  }
+
+  @include extraLarge {
+    margin-top: 100px;
+  }
+}

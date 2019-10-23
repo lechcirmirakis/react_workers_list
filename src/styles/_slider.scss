@@ -1,0 +1,172 @@
+// Styles for Popup Slider
+
+.Slider {
+  background-image: url("../static/images/bg_slider.png");
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+
+  .slick-slider {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .slick-list {
+      text-align: center;
+      padding: 25px 0;
+
+      .slick-track {
+        align-items: center;
+        display: flex !important;
+      }
+
+      .swiper-slide {
+        color: #fff;
+
+        .position,
+        .name {
+          text-shadow: 1px 2px 2px #000000;
+        }
+
+        .position {
+          font-size: 0.8rem;
+          font-weight: 300;
+          text-transform: capitalize;
+          margin-bottom: 5px;
+
+          @include medium {
+            font-size: 1.4rem;
+          }
+
+          @include mediumLarge {
+            font-size: 1.8rem;
+          }
+
+          @include large {
+            font-size: 2.2rem;
+          }
+
+          @include extraLarge {
+            font-size: 4.5rem;
+          }
+        }
+
+        .name {
+          font-weight: 500;
+          font-size: 1.8rem;
+
+          @include medium {
+            font-size: 2.8rem;
+          }
+
+          @include mediumLarge {
+            font-size: 3.8rem;
+          }
+
+          @include large {
+            font-size: 5.8rem;
+          }
+
+          @include extraLarge {
+            font-size: 7.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .slick-arrow {
+    display: none !important;
+  }
+
+  .Slider__arrow {
+    position: absolute;
+    top: 48%;
+    cursor: pointer;
+    transition: ease 0.5s all;
+
+    img {
+      width: 10px;
+    }
+
+    @include medium {
+      img {
+        width: 20px;
+      }
+    }
+
+    @include mediumLarge {
+      img {
+        width: 30px;
+      }
+    }
+
+    @include extraLarge {
+      top: 47%;
+
+      img {
+        width: initial;
+      }
+    }
+  }
+
+  .Slider__arrow:hover {
+    opacity: 0.5;
+  }
+
+  .Slider__arrow--left {
+    left: 10px;
+
+    @include mediumLarge {
+      left: 20px;
+    }
+
+    @include large {
+      left: 30px;
+    }
+
+    @include extraLarge {
+      left: 40px;
+    }
+  }
+
+  .Slider__arrow--right {
+    right: 10px;
+
+    @include mediumLarge {
+      right: 20px;
+    }
+
+    @include large {
+      right: 30px;
+    }
+
+    @include extraLarge {
+      right: 40px;
+    }
+  }
+
+  .Slider__close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    transition: ease 0.5s all;
+    z-index: 100000;
+
+    img {
+      width: 30px;
+    }
+
+    @include extraLarge {
+      top: 50px;
+      right: 50px;
+    }
+  }
+
+  .Slider__close:hover {
+    opacity: 0.7;
+  }
+}

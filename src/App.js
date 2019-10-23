@@ -1,52 +1,23 @@
 import React, { Component } from 'react';
-import Container from './hoc/container';
-import { fadeInDownBig } from 'react-animations';
-import Members from './containers/Members';
-import Radium, { StyleRoot } from 'radium';
+import Members from './components/Members/Members';
+import Slider from './components/Slider/Slider';
 import './App.scss';
-
-const styles = {
-	fadeInDownBig: {
-		animation: 'x 0.5s',
-		animationName: Radium.keyframes(fadeInDownBig, 'fadeInDownBig')
-	}
-}
 
 class OurTeam extends Component {
 	state = {
-		isSlider: true
+		isSlider: false,
+		slideInitial: 0
 	}
 
-	sliderHandler = () => {
+	sliderHandler = (element) => {
 		const sliderStatus = this.state.isSlider;
-		this.setState({
-			isSlider: !sliderStatus
-		})
+		element !== 'close' ? this.setState({ isSlider: !sliderStatus, slideInitial: element - 1 }) : this.setState({ isSlider: !sliderStatus });
 	}
 
 	render() {
-		let mainView;
-
-		if (this.state.isSlider) {
-			mainView = (
-				<section className="OurTeam">
-					<Container>
-						<h2 className="OurTeam__title">Meet our team</h2>
-						<Members sliderToggle={this.sliderHandler} />
-					</Container>
-				</section>
-			)
-		}
-
-		else {
-			mainView = (
-				<StyleRoot>
-					<div className="Slider" style={styles.fadeInDownBig}>
-						DUPA
-					</div>
-				</StyleRoot>
-			)
-		}
+		let mainView = (
+			!this.state.isSlider ? <Members sliderToggle={this.sliderHandler} /> : <Slider slideInitial={this.state.slideInitial} sliderToggle={this.sliderHandler} />
+		)
 
 		return (
 			<>
