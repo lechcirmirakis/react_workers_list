@@ -1,5 +1,13 @@
 @import "styles/global";
 
+.Slider {
+  background-image: url("./static/images/bg_slider.png");
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
 .OurTeam {
   min-height: 100vh;
   position: relative;
@@ -11,7 +19,7 @@
     color: $main-color;
     font-size: 2rem;
 
-    @include large {      
+    @include large {
       font-size: 3.8rem;
     }
   }

@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import Container from './hoc/container';
+import { fadeInDownBig } from 'react-animations';
 import Members from './containers/Members';
+import Radium, { StyleRoot } from 'radium';
 import './App.scss';
+
+const styles = {
+	fadeInDownBig: {
+		animation: 'x 0.5s',
+		animationName: Radium.keyframes(fadeInDownBig, 'fadeInDownBig')
+	}
+}
 
 class OurTeam extends Component {
 	state = {
@@ -31,9 +40,11 @@ class OurTeam extends Component {
 
 		else {
 			mainView = (
-				<div className="slider">
-					DUPA
-			</div>
+				<StyleRoot>
+					<div className="Slider" style={styles.fadeInDownBig}>
+						DUPA
+					</div>
+				</StyleRoot>
 			)
 		}
 

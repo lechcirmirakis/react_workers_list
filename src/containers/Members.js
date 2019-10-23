@@ -7,6 +7,7 @@ const Members = (props) => {
 
     const showAllMembers = member => {
         const { name, position, location, email } = member;
+
         return <Member
             name={name}
             position={position}
