@@ -83,7 +83,8 @@
 
   .Slider__arrow {
     position: absolute;
-    top: 48%;
+    top: 50%;
+    transform: translate(0, -50%);
     cursor: pointer;
     transition: ease 0.5s all;
     z-index: 10000;
@@ -105,8 +106,6 @@
     }
 
     @include extraLarge {
-      top: 47%;
-
       img {
         width: initial;
       }
